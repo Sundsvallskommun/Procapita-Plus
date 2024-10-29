@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="LogIn_TestCase" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="820,1792" sap2010:WorkflowViewState.IdRef="LogIn_TestCase_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="LogIn_TestCase" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="600,1832" sap2010:WorkflowViewState.IdRef="LogIn_TestCase_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -85,21 +85,21 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="548,271" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="548,873" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,192" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,794" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Utredning" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="Utredning" sap:VirtualizedContainerService.HintSize="450,683" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="utredning" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -116,19 +116,11 @@
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions In Search Tool\Search Utredning.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Actions In Search Tool\Search Utredning.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_Tom">
-                  <Literal x:TypeArguments="x:String">240831</Literal>
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_From">
-                  <Literal x:TypeArguments="x:String">241022</Literal>
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_CitizensID2">
-                  <Literal x:TypeArguments="x:String">*</Literal>
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Tom">240831</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_From">241022</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_CitizensID2">*</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_CitizensID1" />
-                <InArgument x:TypeArguments="x:String" x:Key="in_RadioButton">
-                  <Literal x:TypeArguments="x:String">PågåENde</Literal>
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_RadioButton">PågåENde</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -139,9 +131,7 @@
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions In Search Tool\Get Utredning Table.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Actions In Search Tool\Get Utredning Table.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_Utredning">
-                  <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="utredning" />
-                </OutArgument>
+                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_Utredning">[utredning]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Genreal\Close Window Search Tool.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Genreal\Close Window Search Tool.xaml">
@@ -201,9 +191,7 @@
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions In Search Tool\Get Aktualisering Table.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Actions In Search Tool\Get Aktualisering Table.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_Aktualisering">
-                  <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="akt" />
-                </OutArgument>
+                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_Aktualisering">[akt]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Genreal\Close Window Search Tool.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Genreal\Close Window Search Tool.xaml">
@@ -241,28 +229,20 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Genreal\Search Tool.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_27" UnSafe="False" WorkflowFileName="Genreal\Search Tool.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="In_SearchTool">
-                  <Literal x:TypeArguments="x:String">Gem Bevakning</Literal>
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="In_SearchTool">Gem Bevakning</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions In Search Tool\Search Bevakning.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="Actions In Search Tool\Search Bevakning.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_Tom">
-                  <Literal x:TypeArguments="x:String">310824</Literal>
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_From">
-                  <Literal x:TypeArguments="x:String">221024</Literal>
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Tom">310824</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_From">221024</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_CitizensID2" />
                 <InArgument x:TypeArguments="x:String" x:Key="in_CitizensID1" />
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions In Search Tool\Get Bevakning Table.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="Actions In Search Tool\Get Bevakning Table.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_Bevakning">
-                  <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="bevakning" />
-                </OutArgument>
+                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_Bevakning">[bevakning]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Genreal\Close Window Search Tool.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_28" UnSafe="False" WorkflowFileName="Genreal\Close Window Search Tool.xaml">
@@ -274,27 +254,22 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <Sequence sap:VirtualizedContainerService.HintSize="548,683" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence sap:VirtualizedContainerService.HintSize="548,81" sap2010:WorkflowViewState.IdRef="Sequence_6">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Genreal\Search Tool.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="Genreal\Search Tool.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="In_SearchTool">
-            <Literal x:TypeArguments="x:String">VoO Sök dokumentation</Literal>
-          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_SearchTool">VoO Sök dokumentation</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions In Search Tool\Search Medical Records.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="Actions In Search Tool\Search Medical Records.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_Tom">
-            <Literal x:TypeArguments="x:String">241022</Literal>
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_From">
-            <Literal x:TypeArguments="x:String">240831</Literal>
-          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_Tom">241022</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_From">240831</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions In Search Tool\Get Medical RecordsTable.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="Actions In Search Tool\Get Medical RecordsTable.xaml">
