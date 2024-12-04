@@ -4,12 +4,16 @@
     <x:Property Name="in_Password" Type="InArgument(ss:SecureString)" />
     <x:Property Name="in_LoginMethod" Type="InArgument(x:String)" />
     <x:Property Name="in_Environment" Type="InArgument(x:String)" />
-    <x:Property Name="in_FilePathToApplication" Type="InArgument(x:String)" />
+    <x:Property Name="in_FilePathToApplication" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2138,2641</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2138,2681</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Log_In_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
