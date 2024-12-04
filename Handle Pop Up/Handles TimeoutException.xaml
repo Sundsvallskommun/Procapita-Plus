@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1677,1346</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1677,1549</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Handle_TimeoutException_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -74,21 +74,51 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Handle_TimeoutException" sap:VirtualizedContainerService.HintSize="648,1281" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Handle_TimeoutException" sap:VirtualizedContainerService.HintSize="648,1484" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="PopUpExists" />
+      <Variable x:TypeArguments="x:Int32" Name="TimeoutVeryShort" />
+      <Variable x:TypeArguments="x:Int32" Name="TimeoutShort" />
+      <Variable x:TypeArguments="x:Int32" Name="TimeoutMedium" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="586,163" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Int32">[TimeoutVeryShort]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Int32">1000</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Int32">[TimeoutShort]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Int32">5000</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Int32">[TimeoutMedium]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Int32">30000</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
     <ui:UiElementExists DisplayName="Element Exists 'Button'" Exists="[PopUpExists]" sap:VirtualizedContainerService.HintSize="586,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
       <ui:UiElementExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="736b9e6f-256a-40f5-9f48-e533eeb3faf6" InformativeScreenshot="4c1946a1203def1a64608e36b9016b75" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;wnd ctrlid='1' title='OK' /&gt;">
-          <ui:Target.TimeoutMS>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:Target.TimeoutMS>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="736b9e6f-256a-40f5-9f48-e533eeb3faf6" InformativeScreenshot="4c1946a1203def1a64608e36b9016b75" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;wnd ctrlid='1' title='OK' /&gt;" TimeoutMS="[TimeoutShort]">
           <ui:Target.WaitForReady>
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
@@ -106,7 +136,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -130,10 +160,7 @@
           </ui:Click>
           <ui:UiElementExists DisplayName="Element Exists 'Button'" Exists="[PopUpClose]" sap:VirtualizedContainerService.HintSize="510,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
             <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0e8ca675-2c38-4793-b3e9-841e703ad192" InformativeScreenshot="97d7657bf90e67616152252b212468c5" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0e8ca675-2c38-4793-b3e9-841e703ad192" InformativeScreenshot="97d7657bf90e67616152252b212468c5" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;" TimeoutMS="[TimeoutShort]">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
