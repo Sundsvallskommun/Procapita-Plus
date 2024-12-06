@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Force_Quit_Popup" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="820,964" sap2010:WorkflowViewState.IdRef="Force_Quit_Popup_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Force_Quit_Popup" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1132,827" sap2010:WorkflowViewState.IdRef="Force_Quit_Popup_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -60,7 +60,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Force_Quit_Popup" sap:VirtualizedContainerService.HintSize="472,595" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Force_Quit_Popup" sap:VirtualizedContainerService.HintSize="472,675" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="ForceQuitPopup" />
     </Sequence.Variables>
@@ -71,14 +71,14 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:UiElementExists DisplayName="Element Exists 'Static'" Exists="[ForceQuitPopup]" sap:VirtualizedContainerService.HintSize="410,87" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
       <ui:UiElementExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fbc6a1e2-2543-44e6-b1e6-fb31a9ec4be6" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Tietoevry Component Manager' /&gt;&lt;wnd ctrlid='65535' title='The previous session of the program terminated abnormally. The c*' /&gt;" TimeoutMS="5000">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fbc6a1e2-2543-44e6-b1e6-fb31a9ec4be6" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Tietoevry Component Manager' /&gt;&lt;wnd title='The previous session of the program terminated abnormally. The c*' cls='Static' /&gt;" TimeoutMS="5000">
           <ui:Target.WaitForReady>
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[ForceQuitPopup]" sap:VirtualizedContainerService.HintSize="410,357" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[ForceQuitPopup]" sap:VirtualizedContainerService.HintSize="410,437" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="376,175" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -98,7 +98,7 @@
               </ui:CursorPosition>
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c929915a-87d6-4a13-9d9b-53daffd20c82" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Tietoevry Component Manager' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c929915a-87d6-4a13-9d9b-53daffd20c82" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Tietoevry Component Manager' /&gt;&lt;wnd aaname='OK' cls='Button' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -111,7 +111,13 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3" />
+        <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
       </If.Else>
     </If>
   </Sequence>

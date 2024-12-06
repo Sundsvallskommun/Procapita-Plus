@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1677,1549</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1132,1549</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Handle_TimeoutException_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -173,7 +173,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:UiElementExists>
-          <If Condition="[PopUpClose]" sap:VirtualizedContainerService.HintSize="510,479" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[PopUpClose]" DisplayName="If PopUpClose" sap:VirtualizedContainerService.HintSize="510,479" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
               <Sequence sap:VirtualizedContainerService.HintSize="476,297" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <sap:WorkflowViewStateService.ViewState>

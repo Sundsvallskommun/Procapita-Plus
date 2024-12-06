@@ -1,12 +1,17 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Get_Aktualisering_Table" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_dt_Aktualisering" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="in_FilePathToApplication" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1448,2977</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1132,1926</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Get_Aktualisering_Table_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -103,7 +108,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="630,2912" sap2010:WorkflowViewState.IdRef="Sequence_21">
+  <Sequence sap:VirtualizedContainerService.HintSize="608,1861" sap2010:WorkflowViewState.IdRef="Sequence_21">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="TimeoutVeryShort" />
       <Variable x:TypeArguments="x:Int32" Name="TimeoutMedium" />
@@ -116,7 +121,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign Timeout Variables " sap:VirtualizedContainerService.HintSize="568,209" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign Timeout Variables " sap:VirtualizedContainerService.HintSize="546,194" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -160,20 +165,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="568,141" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Start getting Aktualiseing&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Mina Aktualisering" sap:VirtualizedContainerService.HintSize="568,2190" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="fa633c38-4198-4270-9fd9-56e24ae12e0c" Version="V2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="546,92" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Start getting Aktualiseing&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Mina Aktualisering" sap:VirtualizedContainerService.HintSize="546,1252" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="fa633c38-4198-4270-9fd9-56e24ae12e0c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="534,1807" sap2010:WorkflowViewState.IdRef="Sequence_22">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,961" sap2010:WorkflowViewState.IdRef="Sequence_22">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Check all columns" sap:VirtualizedContainerService.HintSize="472,1203" sap2010:WorkflowViewState.IdRef="Sequence_23">
+            <Sequence DisplayName="Check all columns" sap:VirtualizedContainerService.HintSize="450,725" sap2010:WorkflowViewState.IdRef="Sequence_23">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Boolean" Name="MoveRows" />
                 <Variable x:TypeArguments="x:String" Name="str_Temp" />
@@ -184,7 +189,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'tcm.exe VoO'" sap:VirtualizedContainerService.HintSize="410,87" sap2010:WorkflowViewState.IdRef="Activate_1">
+              <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'tcm.exe VoO'" sap:VirtualizedContainerService.HintSize="388,87" sap2010:WorkflowViewState.IdRef="Activate_1">
                 <ui:Activate.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1030bbc-2b88-48b0-97f7-a69b2c29de12" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='*- Sökverktyg' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -202,7 +207,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:Activate>
-              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey to tempurval" sap:VirtualizedContainerService.HintSize="410,137" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="i,t" KeyModifiers="Alt" SpecialKey="False">
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey to tempurval" sap:VirtualizedContainerService.HintSize="388,137" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="i,t" KeyModifiers="Alt" SpecialKey="False">
                 <ui:SendHotkey.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="7d5fd05c-535c-4c16-8bdf-38a4185f4dc0">
                     <ui:Target.TimeoutMS>
@@ -220,7 +225,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:SendHotkey>
-              <ui:UiElementExists DisplayName="Element Exists" Exists="[MoveRows]" sap:VirtualizedContainerService.HintSize="410,87" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <ui:UiElementExists DisplayName="Element Exists" Exists="[MoveRows]" sap:VirtualizedContainerService.HintSize="388,87" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                 <ui:UiElementExists.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fd81c68b-9e09-40b8-82b5-d75eba9ceae2" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='* - Sökverktyg' /&gt;&lt;wnd cls='ListBox' /&gt;&lt;ctrl name='*' role='list item' /&gt;" TimeoutMS="[TimeoutShort]">
                     <ui:Target.WaitForReady>
@@ -229,7 +234,7 @@
                   </ui:Target>
                 </ui:UiElementExists.Target>
               </ui:UiElementExists>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'ListBox'" sap:VirtualizedContainerService.HintSize="410,87" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'ListBox'" sap:VirtualizedContainerService.HintSize="388,87" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -251,15 +256,15 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[MoveRows]" DisplayName="While rows to move" sap:VirtualizedContainerService.HintSize="410,530" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[MoveRows]" DisplayName="While rows to move" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                 <ui:InterruptibleWhile.Body>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,394" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,502" sap2010:WorkflowViewState.IdRef="Sequence_30">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="down" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="388,137" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="down" KeyModifiers="None" SpecialKey="True">
                       <ui:SendHotkey.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="bd138fdd-a3bb-45f3-893e-6c6e48d727d8">
                           <ui:Target.TimeoutMS>
@@ -272,12 +277,12 @@
                       </ui:SendHotkey.Target>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:SendHotkey>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click pilbutton" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click pilbutton" sap:VirtualizedContainerService.HintSize="388,87" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -305,7 +310,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:Click>
-                    <ui:UiElementExists DisplayName="Element Exists" Exists="[MoveRows]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                    <ui:UiElementExists DisplayName="Element Exists" Exists="[MoveRows]" sap:VirtualizedContainerService.HintSize="388,87" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                       <ui:UiElementExists.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fd81c68b-9e09-40b8-82b5-d75eba9ceae2" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='* - Sökverktyg' /&gt;&lt;wnd cls='ListBox' /&gt;&lt;ctrl name='*' role='list item' /&gt;" TimeoutMS="[TimeoutShort]">
                           <ui:Target.WaitForReady>
@@ -318,16 +323,16 @@
                 </ui:InterruptibleWhile.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InterruptibleWhile>
             </Sequence>
-            <Sequence DisplayName="Navigate and get table" sap:VirtualizedContainerService.HintSize="472,449" sap2010:WorkflowViewState.IdRef="Sequence_31">
+            <Sequence DisplayName="Navigate and get table" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_31">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -365,10 +370,10 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" FilePath="C:\Program Files (x86)\Lifecare\Utbildning\tcm.exe" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='Mina Bevakningar' /&gt;" Title="VoO Sök dokumentation - Sökverktyg" />
+        <uix:TargetApp Area="0, 0, 0, 0" FilePath="[in_FilePathToApplication]" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='Mina Bevakningar' /&gt;" Title="VoO Sök dokumentation - Sökverktyg" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="568,141" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Got table with &quot; + out_dt_Aktualisering.RowCount.ToString + &quot; number of rows and &quot; + out_dt_Aktualisering.ColumnCount.ToString + &quot; number of columns.&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="546,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Got table with &quot; + out_dt_Aktualisering.RowCount.ToString + &quot; number of rows and &quot; + out_dt_Aktualisering.ColumnCount.ToString + &quot; number of columns.&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

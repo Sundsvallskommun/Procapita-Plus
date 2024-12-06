@@ -1,15 +1,16 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Get_Medical_Records_Table" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc=
-"http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010=
-"http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco=
-"clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities"
- xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Get_Medical_Records_Table" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_dt_MedicalRecords" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="in_FilePathToApplication" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1318,2019</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1132,2019</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Get_Medical_Records_Table_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -379,7 +380,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" FilePath="C:\Program Files (x86)\Lifecare\Utbildning\tcm.exe" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Sök dokumentation - Sökverktyg' /&gt;" Title="VoO Sök dokumentation - Sökverktyg" />
+        <uix:TargetApp Area="0, 0, 0, 0" Arguments="[in_FilePathToApplication]" FilePath="C:\Program Files (x86)\Lifecare\Utbildning\tcm.exe" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Sök dokumentation - Sökverktyg' /&gt;" Title="VoO Sök dokumentation - Sökverktyg" />
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">

@@ -1,12 +1,17 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Get_Bevakning_Table" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_dt_Bevakning" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="in_FilePathToApplication" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1448,2923</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1132,2767</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Get_Bevakning_Table_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -103,7 +108,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="630,2858" sap2010:WorkflowViewState.IdRef="Sequence_21">
+  <Sequence sap:VirtualizedContainerService.HintSize="630,2702" sap2010:WorkflowViewState.IdRef="Sequence_21">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="TimeoutVeryShort" />
       <Variable x:TypeArguments="x:Int32" Name="TimeoutMedium" />
@@ -115,7 +120,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign Timeout Variables " sap:VirtualizedContainerService.HintSize="568,209" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign Timeout Variables " sap:VirtualizedContainerService.HintSize="568,194" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -159,8 +164,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="568,141" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Start getting Bevakning&quot;]" />
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Ta bort IconBase64" AttachMode="ByInstance" DisplayName="Use Application: Mina Bevakningar" sap:VirtualizedContainerService.HintSize="568,2136" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="fa633c38-4198-4270-9fd9-56e24ae12e0c" Version="V2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="568,92" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Start getting Bevakning&quot;]" />
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Ta bort IconBase64" AttachMode="ByInstance" DisplayName="Use Application: Mina Bevakningar" sap:VirtualizedContainerService.HintSize="568,2044" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="fa633c38-4198-4270-9fd9-56e24ae12e0c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -365,7 +370,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" FilePath="C:\Program Files (x86)\Lifecare\Utbildning\tcm.exe" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='Mina Bevakningar' /&gt;" Title="VoO Sök dokumentation - Sökverktyg" />
+        <uix:TargetApp Area="0, 0, 0, 0" FilePath="[in_FilePathToApplication]" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='Mina Bevakningar' /&gt;" Title="VoO Sök dokumentation - Sökverktyg" />
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
