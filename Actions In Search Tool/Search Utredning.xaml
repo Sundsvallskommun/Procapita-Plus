@@ -13,7 +13,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>875,1927</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1132,2057</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Search_Utredning_Records_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -85,7 +85,7 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Search Utredning" sap:VirtualizedContainerService.HintSize="554,1862" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Search Utredning" sap:VirtualizedContainerService.HintSize="554,1992" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="MissingValue" />
       <Variable x:TypeArguments="x:Int32" Name="TimeoutVeryShort" />
@@ -145,9 +145,10 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Activate>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Tom'" EmptyField="True" sap:VirtualizedContainerService.HintSize="492,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="True" Text="[in_Tom]">
+    <Delay Duration="[TimeSpan.FromMilliseconds(1000)]" sap:VirtualizedContainerService.HintSize="492,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'From'" EmptyField="True" sap:VirtualizedContainerService.HintSize="492,135" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="True" Text="[in_From]">
       <ui:TypeInto.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3c89355-1aa1-4a9b-9cbb-c2c079bb8fab" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Utredning - Sökverktyg' /&gt;&lt;uia automationid='1139' cls='Edit' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3c89355-1aa1-4a9b-9cbb-c2c079bb8fab" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Utredning - Sökverktyg' /&gt;&lt;uia cls='Edit' idx='3' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -163,9 +164,9 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:TypeInto>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'From'" EmptyField="True" sap:VirtualizedContainerService.HintSize="492,135" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="True" Text="[in_From]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Tom'" EmptyField="True" sap:VirtualizedContainerService.HintSize="492,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="True" Text="[in_Tom]">
       <ui:TypeInto.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3c89355-1aa1-4a9b-9cbb-c2c079bb8fab" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Utredning - Sökverktyg' /&gt;&lt;uia automationid='1138' cls='Edit' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3c89355-1aa1-4a9b-9cbb-c2c079bb8fab" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Utredning - Sökverktyg' /&gt;&lt;uia cls='Edit' idx='4' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
