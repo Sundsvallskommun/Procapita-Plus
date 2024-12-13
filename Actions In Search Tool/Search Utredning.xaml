@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Search_Utredning_Records" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Search_Utredning_Records" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Format: ddMMyy&#xA;ex: 310824" Name="in_Tom" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="Format: ddMMyy&#xA;ex: 310824" Name="in_From" Type="InArgument(x:String)" />
@@ -16,7 +16,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1759,2816</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1759,4753</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Search_Utredning_Records_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -37,6 +37,8 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -86,9 +88,13 @@
       <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Search Utredning" sap:VirtualizedContainerService.HintSize="572,2751" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Search Utredning" sap:VirtualizedContainerService.HintSize="648,4688" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="MissingValue" />
       <Variable x:TypeArguments="x:Int32" Name="TimeoutVeryShort" />
@@ -102,7 +108,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="510,163" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="586,163" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -132,7 +138,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'tcm.exe VoO'" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="Activate_1">
+    <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'tcm.exe VoO'" sap:VirtualizedContainerService.HintSize="586,87" sap2010:WorkflowViewState.IdRef="Activate_1">
       <ui:Activate.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1030bbc-2b88-48b0-97f7-a69b2c29de12" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Utredning - Sökverktyg' /&gt;">
           <ui:Target.TimeoutMS>
@@ -150,7 +156,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Activate>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="586,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,201" sap2010:WorkflowViewState.IdRef="Sequence_13">
           <sap:WorkflowViewStateService.ViewState>
@@ -168,7 +174,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:UiElementExists DisplayName="Element Exists 'tcm.exe  Procapita'" Exists="[SearchViewOpen]" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
+    <ui:UiElementExists DisplayName="Element Exists 'tcm.exe  Procapita'" Exists="[SearchViewOpen]" sap:VirtualizedContainerService.HintSize="586,87" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
       <ui:UiElementExists.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3387d1c9-cf1b-44c3-9a61-314b6e45a5d7" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Utredning - Sökverktyg' /&gt;&lt;uia cls='Edit' idx='3' /&gt;" TimeoutMS="[TimeoutVeryShort]">
           <ui:Target.WaitForReady>
@@ -177,15 +183,15 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[Not SearchViewOpen]" DisplayName="If SearchViewOpen" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="If_4">
+    <If Condition="[Not SearchViewOpen]" DisplayName="If SearchViewOpen" sap:VirtualizedContainerService.HintSize="586,842" sap2010:WorkflowViewState.IdRef="If_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,348" sap2010:WorkflowViewState.IdRef="Sequence_14">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,480" sap2010:WorkflowViewState.IdRef="Sequence_14">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -215,19 +221,21 @@
               </ui:Target>
             </ui:WaitUiElementAppear.Target>
           </ui:WaitUiElementAppear>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Search view is open&quot;]" />
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Search view is open&quot;]" />
         </Sequence>
       </If.Else>
     </If>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'From'" EmptyField="True" sap:VirtualizedContainerService.HintSize="510,135" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="True" Text="[in_From]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'From'" EmptyField="True" sap:VirtualizedContainerService.HintSize="586,135" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="True" Text="[in_From]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3c89355-1aa1-4a9b-9cbb-c2c079bb8fab" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Utredning - Sökverktyg' /&gt;&lt;uia cls='Edit' idx='3' /&gt;">
           <ui:Target.TimeoutMS>
@@ -245,7 +253,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:TypeInto>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Tom'" EmptyField="True" sap:VirtualizedContainerService.HintSize="510,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="True" Text="[in_Tom]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Tom'" EmptyField="True" sap:VirtualizedContainerService.HintSize="586,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="True" Text="[in_Tom]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3c89355-1aa1-4a9b-9cbb-c2c079bb8fab" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Utredning - Sökverktyg' /&gt;&lt;uia cls='Edit' idx='4' /&gt;">
           <ui:Target.TimeoutMS>
@@ -263,7 +271,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:TypeInto>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Private: Type Into 'CitizensID' first 2 " EmptyField="True" sap:VirtualizedContainerService.HintSize="510,135" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="True" Text="[in_CitizensID1]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Private: Type Into 'CitizensID' first 2 " EmptyField="True" sap:VirtualizedContainerService.HintSize="586,135" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="True" Text="[in_CitizensID1]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3c89355-1aa1-4a9b-9cbb-c2c079bb8fab" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Utredning - Sökverktyg' /&gt;&lt;uia automationid='1153' cls='Edit' /&gt;">
           <ui:Target.TimeoutMS>
@@ -281,7 +289,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:TypeInto>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Private: Type Into 'CitizensID'" EmptyField="True" sap:VirtualizedContainerService.HintSize="510,135" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="True" Text="[in_CitizensID2]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Private: Type Into 'CitizensID'" EmptyField="True" sap:VirtualizedContainerService.HintSize="586,135" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="True" Text="[in_CitizensID2]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3c89355-1aa1-4a9b-9cbb-c2c079bb8fab" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Utredning - Sökverktyg' /&gt;&lt;uia automationid='1142' cls='Edit' /&gt;">
           <ui:Target.TimeoutMS>
@@ -299,7 +307,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:TypeInto>
-    <Sequence DisplayName="Choose radiobuttons" sap:VirtualizedContainerService.HintSize="510,81" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Choose radiobuttons" sap:VirtualizedContainerService.HintSize="586,81" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -342,7 +350,7 @@
         </ui:Click.Target>
       </ui:Click>
     </Sequence>
-    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="510,133" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="b" KeyModifiers="Ctrl">
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="586,133" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="b" KeyModifiers="Ctrl">
       <ui:SendHotkey.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="a5db496c-22c7-4a21-a3f1-77c86464bebd">
           <ui:Target.TimeoutMS>
@@ -354,7 +362,7 @@
         </ui:Target>
       </ui:SendHotkey.Target>
     </ui:SendHotkey>
-    <ui:UiElementExists DisplayName="Element Exists 'tcm.exe  Procapita'" Exists="[NoResultViewOpen]" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
+    <ui:UiElementExists DisplayName="Element Exists 'tcm.exe  Procapita'" Exists="[NoResultViewOpen]" sap:VirtualizedContainerService.HintSize="586,87" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
       <ui:UiElementExists.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3387d1c9-cf1b-44c3-9a61-314b6e45a5d7" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;uia automationid='1' cls='Button' /&gt;" TimeoutMS="[TimeoutVeryShort]">
           <ui:Target.WaitForReady>
@@ -363,15 +371,18 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[NoResultViewOpen]" DisplayName="If ResultViewOpen" sap:VirtualizedContainerService.HintSize="510,786" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[NoResultViewOpen]" DisplayName="If ResultViewOpen" sap:VirtualizedContainerService.HintSize="586,1933" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,175" sap2010:WorkflowViewState.IdRef="Sequence_11">
+        <Sequence sap:VirtualizedContainerService.HintSize="552,1322" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="Popuptext" />
+          </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click ok no result found" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click ok no result found" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -393,6 +404,79 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="510,975" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch.Try>
+              <Sequence sap:VirtualizedContainerService.HintSize="472,747" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:Boolean" Name="PopuptextExist" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:UiElementExists DisplayName="Element Exists" Exists="[PopuptextExist]" sap:VirtualizedContainerService.HintSize="410,87" sap2010:WorkflowViewState.IdRef="UiElementExists_10">
+                  <ui:UiElementExists.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="68ff6f78-bd0f-47b8-87cc-8c1309fda920" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;wnd ctrlid='1001' title='*' /&gt;" TimeoutMS="[TimeoutVeryShort]">
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:UiElementExists.Target>
+                </ui:UiElementExists>
+                <If Condition="[PopuptextExist]" DisplayName="If PopuptextExist" sap:VirtualizedContainerService.HintSize="410,377" sap2010:WorkflowViewState.IdRef="If_5">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,195" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Static'" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                        <ui:GetValue.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b9c215c5-7867-4445-a68f-7aa6bb40c823" InformativeScreenshot="9a036a480c3a197553c334969c827628" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;wnd ctrlid='1001' title='*' /&gt;" TimeoutMS="[TimeoutVeryShort]">
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:GetValue.Target>
+                        <ui:GetValue.Value>
+                          <OutArgument x:TypeArguments="x:String">[Popuptext]</OutArgument>
+                        </ui:GetValue.Value>
+                      </ui:GetValue>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_18" />
+                  </If.Else>
+                </If>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;No result is opened. &quot; + If(PopuptextExist, Popuptext,&quot;&quot;)]" />
+              </Sequence>
+            </TryCatch.Try>
+            <TryCatch.Catches>
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="476,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ActivityAction x:TypeArguments="s:Exception">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                  </ActivityAction.Argument>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;No popuptex found.&quot;]" />
+                </ActivityAction>
+              </Catch>
+            </TryCatch.Catches>
+          </TryCatch>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;No result is opened. &quot;]" />
         </Sequence>
       </If.Then>
       <If.Else>
@@ -423,7 +507,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="586,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,310" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>

@@ -19,7 +19,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1759,2488</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1759,3954</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Search_Aktualisering_Records_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -91,7 +91,7 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Search_Aktualisering_Records" sap:VirtualizedContainerService.HintSize="572,2423" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Search_Aktualisering_Records" sap:VirtualizedContainerService.HintSize="572,3889" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="MissingValue" />
       <Variable x:TypeArguments="x:Int32" Name="TimeoutMedium" />
@@ -181,15 +181,15 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[Not SearchViewOpen]" DisplayName="If SearchViewOpen" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[Not SearchViewOpen]" DisplayName="If SearchViewOpen" sap:VirtualizedContainerService.HintSize="510,842" sap2010:WorkflowViewState.IdRef="If_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,348" sap2010:WorkflowViewState.IdRef="Sequence_18">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,480" sap2010:WorkflowViewState.IdRef="Sequence_18">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -219,10 +219,18 @@
               </ui:Target>
             </ui:WaitUiElementAppear.Target>
           </ui:WaitUiElementAppear>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Search view is open&quot;]" />
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_19" />
+        <Sequence sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_19">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Search view is open&quot;]" />
+        </Sequence>
       </If.Else>
     </If>
     <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Tom'" EmptyField="True" sap:VirtualizedContainerService.HintSize="510,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="True" Text="[in_Tom]">
@@ -361,7 +369,7 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[NoResultViewOpen]" DisplayName="If ResultViewOpen" sap:VirtualizedContainerService.HintSize="510,751" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[NoResultViewOpen]" DisplayName="If ResultViewOpen" sap:VirtualizedContainerService.HintSize="510,1427" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -369,13 +377,17 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,175" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <Sequence sap:VirtualizedContainerService.HintSize="452,851" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:Boolean" Name="PopuptextExist" />
+            <Variable x:TypeArguments="x:String" Name="Popuptext" />
+          </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click ok no result found" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click ok no result found" sap:VirtualizedContainerService.HintSize="410,87" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -397,6 +409,42 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
+          <ui:UiElementExists DisplayName="Element Exists" Exists="[PopuptextExist]" sap:VirtualizedContainerService.HintSize="410,87" sap2010:WorkflowViewState.IdRef="UiElementExists_11">
+            <ui:UiElementExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="68ff6f78-bd0f-47b8-87cc-8c1309fda920" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;wnd ctrlid='1001' title='*' /&gt;" TimeoutMS="[TimeoutVeryShort]">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:UiElementExists.Target>
+          </ui:UiElementExists>
+          <If Condition="[PopuptextExist]" DisplayName="If PopuptextExist" sap:VirtualizedContainerService.HintSize="410,377" sap2010:WorkflowViewState.IdRef="If_4">
+            <If.Then>
+              <Sequence sap:VirtualizedContainerService.HintSize="376,195" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Static'" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="GetValue_3">
+                  <ui:GetValue.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b9c215c5-7867-4445-a68f-7aa6bb40c823" InformativeScreenshot="9a036a480c3a197553c334969c827628" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;wnd ctrlid='1001' title='*' /&gt;" TimeoutMS="[TimeoutVeryShort]">
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:GetValue.Target>
+                  <ui:GetValue.Value>
+                    <OutArgument x:TypeArguments="x:String">[Popuptext]</OutArgument>
+                  </ui:GetValue.Value>
+                </ui:GetValue>
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_21" />
+            </If.Else>
+          </If>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;No result is opened. &quot; + If(PopuptextExist, Popuptext,&quot;&quot;)]" />
         </Sequence>
       </If.Then>
       <If.Else>
