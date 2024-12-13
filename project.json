@@ -10,7 +10,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.4.5.0",
-  "projectVersion": "1.0.27",
+  "projectVersion": "1.0.28",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -67,6 +67,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Tests\\Get popup and handle popup test.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "f3f32bd1-6b50-459e-8534-410b09e77658",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\Search bevakning test case.xaml"
       }
     ],
     "modernBehavior": false

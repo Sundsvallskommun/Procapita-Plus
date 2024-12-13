@@ -76,7 +76,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Genreal\Search Tool.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Genreal\Search Tool.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="In_SearchTool">VoO Sök dokumentation</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_SearchTool">Gem Bevakning</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
@@ -86,16 +86,18 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Search Medical Records.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Actions In Search Tool\Search Medical Records.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions In Search Tool\Search Bevakning.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Actions In Search Tool\Search Bevakning.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_Tom">
-            <Literal x:TypeArguments="x:String">241108</Literal>
+            <Literal x:TypeArguments="x:String">241212</Literal>
           </InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="in_From">
-            <Literal x:TypeArguments="x:String">241008</Literal>
+            <Literal x:TypeArguments="x:String">241212</Literal>
           </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_CitizensID2" />
+          <InArgument x:TypeArguments="x:String" x:Key="in_CitizensID1" />
           <InArgument x:TypeArguments="x:Int32" x:Key="in_TimeoutInSeconds">
-            <Literal x:TypeArguments="x:Int32" Value="100" />
+            <Literal x:TypeArguments="x:Int32" Value="50" />
           </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
