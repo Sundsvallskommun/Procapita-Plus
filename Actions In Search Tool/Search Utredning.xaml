@@ -10,12 +10,13 @@
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
     </x:Property>
+    <x:Property Name="out_NoResultFound" Type="OutArgument(x:Boolean)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1759,2638</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1759,2635</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Search_Utredning_Records_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -87,7 +88,7 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Search Utredning" sap:VirtualizedContainerService.HintSize="512,2573" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Search Utredning" sap:VirtualizedContainerService.HintSize="572,2570" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="MissingValue" />
       <Variable x:TypeArguments="x:Int32" Name="TimeoutVeryShort" />
@@ -100,7 +101,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="450,163" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="510,163" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -130,7 +131,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'tcm.exe VoO'" sap:VirtualizedContainerService.HintSize="450,87" sap2010:WorkflowViewState.IdRef="Activate_1">
+    <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'tcm.exe VoO'" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="Activate_1">
       <ui:Activate.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1030bbc-2b88-48b0-97f7-a69b2c29de12" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Utredning - Sökverktyg' /&gt;">
           <ui:Target.TimeoutMS>
@@ -148,8 +149,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Activate>
-    <Delay Duration="[TimeSpan.FromMilliseconds(1000)]" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'From'" EmptyField="True" sap:VirtualizedContainerService.HintSize="450,135" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="True" Text="[in_From]">
+    <Delay Duration="[TimeSpan.FromMilliseconds(1000)]" sap:VirtualizedContainerService.HintSize="510,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'From'" EmptyField="True" sap:VirtualizedContainerService.HintSize="510,135" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="True" Text="[in_From]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3c89355-1aa1-4a9b-9cbb-c2c079bb8fab" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Utredning - Sökverktyg' /&gt;&lt;uia cls='Edit' idx='3' /&gt;">
           <ui:Target.TimeoutMS>
@@ -167,7 +168,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:TypeInto>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Tom'" EmptyField="True" sap:VirtualizedContainerService.HintSize="450,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="True" Text="[in_Tom]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Tom'" EmptyField="True" sap:VirtualizedContainerService.HintSize="510,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="True" Text="[in_Tom]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3c89355-1aa1-4a9b-9cbb-c2c079bb8fab" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Utredning - Sökverktyg' /&gt;&lt;uia cls='Edit' idx='4' /&gt;">
           <ui:Target.TimeoutMS>
@@ -185,7 +186,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:TypeInto>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Private: Type Into 'CitizensID' first 2 " EmptyField="True" sap:VirtualizedContainerService.HintSize="450,135" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="True" Text="[in_CitizensID1]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Private: Type Into 'CitizensID' first 2 " EmptyField="True" sap:VirtualizedContainerService.HintSize="510,135" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="True" Text="[in_CitizensID1]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3c89355-1aa1-4a9b-9cbb-c2c079bb8fab" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Utredning - Sökverktyg' /&gt;&lt;uia automationid='1153' cls='Edit' /&gt;">
           <ui:Target.TimeoutMS>
@@ -203,7 +204,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:TypeInto>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Private: Type Into 'CitizensID'" EmptyField="True" sap:VirtualizedContainerService.HintSize="450,135" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="True" Text="[in_CitizensID2]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Private: Type Into 'CitizensID'" EmptyField="True" sap:VirtualizedContainerService.HintSize="510,135" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="True" Text="[in_CitizensID2]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3c89355-1aa1-4a9b-9cbb-c2c079bb8fab" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Utredning - Sökverktyg' /&gt;&lt;uia automationid='1142' cls='Edit' /&gt;">
           <ui:Target.TimeoutMS>
@@ -221,7 +222,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:TypeInto>
-    <Sequence DisplayName="Choose radiobuttons" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Choose radiobuttons" sap:VirtualizedContainerService.HintSize="510,81" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -264,7 +265,7 @@
         </ui:Click.Target>
       </ui:Click>
     </Sequence>
-    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="450,133" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="b" KeyModifiers="Ctrl">
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="510,133" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="b" KeyModifiers="Ctrl">
       <ui:SendHotkey.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="a5db496c-22c7-4a21-a3f1-77c86464bebd">
           <ui:Target.TimeoutMS>
@@ -276,7 +277,7 @@
         </ui:Target>
       </ui:SendHotkey.Target>
     </ui:SendHotkey>
-    <ui:UiElementExists DisplayName="Element Exists 'tcm.exe  Procapita'" Exists="[ResultViewOpen]" sap:VirtualizedContainerService.HintSize="450,87" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
+    <ui:UiElementExists DisplayName="Element Exists 'tcm.exe  Procapita'" Exists="[ResultViewOpen]" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
       <ui:UiElementExists.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3387d1c9-cf1b-44c3-9a61-314b6e45a5d7" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;uia automationid='1' cls='Button' /&gt;">
           <ui:Target.TimeoutMS>
@@ -288,15 +289,15 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[ResultViewOpen]" DisplayName="If ResultViewOpen" sap:VirtualizedContainerService.HintSize="450,530" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[ResultViewOpen]" DisplayName="If ResultViewOpen" sap:VirtualizedContainerService.HintSize="510,654" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,348" sap2010:WorkflowViewState.IdRef="Sequence_11">
+        <Sequence sap:VirtualizedContainerService.HintSize="476,297" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click ok no result found" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click ok no result found" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -318,35 +319,37 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey To result" sap:VirtualizedContainerService.HintSize="334,133" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="i,r" KeyModifiers="Alt">
-            <ui:SendHotkey.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="810d6f58-0fad-4521-8c5f-0f0e3c1a43a7">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
+          <Assign DisplayName="Assign out_NoResultFound" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Boolean">[out_NoResultFound]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,175" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'list item'" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+            <ui:WaitUiElementAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1bf4ef15-cb6f-42ee-b7a2-fa66ae7ae3a4" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='* - Sökverktyg' /&gt;&lt;wnd cls='SysListView32' /&gt;&lt;ctrl role='list item' idx='1' /&gt;" TimeoutMS="[in_TimeoutInSeconds]">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
               </ui:Target>
-            </ui:SendHotkey.Target>
-          </ui:SendHotkey>
+            </ui:WaitUiElementAppear.Target>
+          </ui:WaitUiElementAppear>
         </Sequence>
-      </If.Then>
-      <If.Else>
-        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_12" />
       </If.Else>
     </If>
-    <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'list item'" sap:VirtualizedContainerService.HintSize="450,87" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
-      <ui:WaitUiElementAppear.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1bf4ef15-cb6f-42ee-b7a2-fa66ae7ae3a4" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='* - Sökverktyg' /&gt;&lt;wnd cls='SysListView32' /&gt;&lt;ctrl role='list item' idx='1' /&gt;" TimeoutMS="[in_TimeoutInSeconds]">
-          <ui:Target.WaitForReady>
-            <InArgument x:TypeArguments="ui:WaitForReady" />
-          </ui:Target.WaitForReady>
-        </ui:Target>
-      </ui:WaitUiElementAppear.Target>
-    </ui:WaitUiElementAppear>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Result is opened. &quot;]" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Result is opened. &quot;]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,310" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
