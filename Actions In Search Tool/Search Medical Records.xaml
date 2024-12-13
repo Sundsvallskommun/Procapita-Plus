@@ -13,7 +13,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1759,3719</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1759,3699</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Search_Medical_Records_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -73,7 +73,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Search_Medical_Records" sap:VirtualizedContainerService.HintSize="572,3654" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Search_Medical_Records" sap:VirtualizedContainerService.HintSize="572,3634" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="DateMissing" />
       <Variable x:TypeArguments="x:Int32" Name="TimeoutVeryShort" />
@@ -160,7 +160,7 @@
     </ui:CommentOut>
     <ui:UiElementExists DisplayName="Element Exists 'tcm.exe  Procapita'" Exists="[SearchViewOpen]" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
       <ui:UiElementExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3387d1c9-cf1b-44c3-9a61-314b6e45a5d7" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Sök dokumentation - Sökverktyg' /&gt;&lt;wnd cls='Edit' /&gt;" TimeoutMS="[TimeoutVeryShort]">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3387d1c9-cf1b-44c3-9a61-314b6e45a5d7" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='* - Sökverktyg' /&gt;&lt;wnd cls='Edit' /&gt;" TimeoutMS="[TimeoutVeryShort]">
           <ui:Target.WaitForReady>
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
@@ -269,16 +269,16 @@
     </ui:SendHotkey>
     <ui:UiElementExists DisplayName="Element Exists 'tcm.exe  Procapita'" Exists="[NoResultViewOpen]" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
       <ui:UiElementExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3387d1c9-cf1b-44c3-9a61-314b6e45a5d7" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;uia automationid='1' cls='Button' /&gt;" TimeoutMS="[TimeoutVeryShort]">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3387d1c9-cf1b-44c3-9a61-314b6e45a5d7" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;uia automationid='1' cls='Button' /&gt;" TimeoutMS="[TimeoutMedium]">
           <ui:Target.WaitForReady>
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[NoResultViewOpen]" DisplayName="If ResultViewOpen" sap:VirtualizedContainerService.HintSize="510,1462" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[NoResultViewOpen]" DisplayName="If ResultViewOpen" sap:VirtualizedContainerService.HintSize="510,1442" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="452,851" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence sap:VirtualizedContainerService.HintSize="452,831" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="PopuptextExist" />
             <Variable x:TypeArguments="x:String" Name="Popuptext" />
@@ -319,17 +319,17 @@
               </ui:Target>
             </ui:UiElementExists.Target>
           </ui:UiElementExists>
-          <If Condition="[PopuptextExist]" DisplayName="If PopuptextExist" sap:VirtualizedContainerService.HintSize="410,377" sap2010:WorkflowViewState.IdRef="If_4">
+          <If Condition="[PopuptextExist]" DisplayName="If PopuptextExist" sap:VirtualizedContainerService.HintSize="410,357" sap2010:WorkflowViewState.IdRef="If_4">
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,195" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,175" sap2010:WorkflowViewState.IdRef="Sequence_14">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Static'" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Static'" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="GetValue_1">
                   <ui:GetValue.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b9c215c5-7867-4445-a68f-7aa6bb40c823" InformativeScreenshot="9a036a480c3a197553c334969c827628" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;wnd ctrlid='1001' title='*' /&gt;" TimeoutMS="[TimeoutVeryShort]">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b9c215c5-7867-4445-a68f-7aa6bb40c823" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;wnd ctrlid='1001' title='*' /&gt;" TimeoutMS="[TimeoutVeryShort]">
                       <ui:Target.WaitForReady>
                         <InArgument x:TypeArguments="ui:WaitForReady" />
                       </ui:Target.WaitForReady>
