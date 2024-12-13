@@ -9,7 +9,7 @@
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
     </x:Property>
-    <x:Property Name="out_NoResultFound" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="out_ResultFound" Type="OutArgument(x:Boolean)" />
   </x:Members>
   <this:Search_Bevakning.in_CitizensID1>
     <InArgument x:TypeArguments="x:String" />
@@ -298,7 +298,7 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[ResultViewOpen]" DisplayName="If ResultViewOpen" sap:VirtualizedContainerService.HintSize="510,654" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[Not ResultViewOpen]" DisplayName="If ResultViewOpen" sap:VirtualizedContainerService.HintSize="510,654" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="476,297" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
@@ -330,7 +330,7 @@
           </ui:Click>
           <Assign DisplayName="Assign out_NoResultFound" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
             <Assign.To>
-              <OutArgument x:TypeArguments="x:Boolean">[out_NoResultFound]</OutArgument>
+              <OutArgument x:TypeArguments="x:Boolean">[out_ResultFound]</OutArgument>
             </Assign.To>
             <Assign.Value>
               <InArgument x:TypeArguments="x:Boolean">True</InArgument>

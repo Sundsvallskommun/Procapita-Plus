@@ -10,7 +10,7 @@
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
     </x:Property>
-    <x:Property Name="out_NoResultFound" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="out_ResultFound" Type="OutArgument(x:Boolean)" />
   </x:Members>
   <this:Search_Aktualisering_Records.in_CitizensID1>
     <InArgument x:TypeArguments="x:String" />
@@ -405,7 +405,7 @@
           </ui:Click>
           <Assign DisplayName="Assign out_NoResultFound" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
             <Assign.To>
-              <OutArgument x:TypeArguments="x:Boolean">[out_NoResultFound]</OutArgument>
+              <OutArgument x:TypeArguments="x:Boolean">[out_ResultFound]</OutArgument>
             </Assign.To>
             <Assign.Value>
               <InArgument x:TypeArguments="x:Boolean">True</InArgument>

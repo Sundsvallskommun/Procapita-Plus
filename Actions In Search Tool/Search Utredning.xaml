@@ -5,12 +5,8 @@
     <x:Property Name="in_CitizensID2" Type="InArgument(x:String)" />
     <x:Property Name="in_CitizensID1" Type="InArgument(x:String)" />
     <x:Property Name="in_RadioButton" Type="InArgument(x:String)" />
-    <x:Property Name="in_TimeoutInSeconds" Type="InArgument(x:Int32)">
-      <x:Property.Attributes>
-        <RequiredArgumentAttribute />
-      </x:Property.Attributes>
-    </x:Property>
-    <x:Property Name="out_NoResultFound" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="in_TimeoutInSeconds" Type="InArgument(x:Int32)" />
+    <x:Property Name="out_ResultFound" Type="OutArgument(x:Boolean)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -321,7 +317,7 @@
           </ui:Click>
           <Assign DisplayName="Assign out_NoResultFound" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
             <Assign.To>
-              <OutArgument x:TypeArguments="x:Boolean">[out_NoResultFound]</OutArgument>
+              <OutArgument x:TypeArguments="x:Boolean">[out_ResultFound]</OutArgument>
             </Assign.To>
             <Assign.Value>
               <InArgument x:TypeArguments="x:Boolean">True</InArgument>

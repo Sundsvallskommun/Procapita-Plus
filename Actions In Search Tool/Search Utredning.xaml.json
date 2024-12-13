@@ -70,6 +70,17 @@
       "IsRequired": false,
       "IsPrincipal": true,
       "DataSourceItems": null
+    },
+    {
+      "Name": "out_ResultFound",
+      "DisplayName": "out_ResultFound",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
     }
   ]
 }
