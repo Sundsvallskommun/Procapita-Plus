@@ -101,7 +101,7 @@
       <Variable x:TypeArguments="x:Boolean" Name="Loading" />
       <Variable x:TypeArguments="x:String" Name="ConfirmationText" />
       <Variable x:TypeArguments="x:Int32" Name="NrOfRetries" />
-      <Variable x:TypeArguments="x:Boolean" Name="ResultViewOpen" />
+      <Variable x:TypeArguments="x:Boolean" Name="NoResultViewOpen" />
       <Variable x:TypeArguments="x:Boolean" Name="SearchViewOpen" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -174,10 +174,7 @@
     </ui:CommentOut>
     <ui:UiElementExists DisplayName="Element Exists 'tcm.exe  Procapita'" Exists="[SearchViewOpen]" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="UiElementExists_10">
       <ui:UiElementExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3387d1c9-cf1b-44c3-9a61-314b6e45a5d7" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Aktualisering - Sökverktyg' /&gt;&lt;uia automationid='29045' cls='Edit' /&gt;">
-          <ui:Target.TimeoutMS>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:Target.TimeoutMS>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3387d1c9-cf1b-44c3-9a61-314b6e45a5d7" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='VoO Aktualisering - Sökverktyg' /&gt;&lt;uia automationid='29045' cls='Edit' /&gt;" TimeoutMS="[TimeoutVeryShort]">
           <ui:Target.WaitForReady>
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
@@ -355,19 +352,16 @@
         </ui:Target>
       </ui:SendHotkey.Target>
     </ui:SendHotkey>
-    <ui:UiElementExists DisplayName="Element Exists 'tcm.exe  Procapita'" Exists="[ResultViewOpen]" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
+    <ui:UiElementExists DisplayName="Element Exists 'tcm.exe  Procapita'" Exists="[NoResultViewOpen]" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
       <ui:UiElementExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3387d1c9-cf1b-44c3-9a61-314b6e45a5d7" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;uia automationid='1' cls='Button' /&gt;">
-          <ui:Target.TimeoutMS>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:Target.TimeoutMS>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3387d1c9-cf1b-44c3-9a61-314b6e45a5d7" Selector="&lt;wnd app='tcm.exe' cls='#32770' title='Procapita' /&gt;&lt;uia automationid='1' cls='Button' /&gt;" TimeoutMS="[TimeoutVeryShort]">
           <ui:Target.WaitForReady>
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[Not ResultViewOpen]" DisplayName="If ResultViewOpen" sap:VirtualizedContainerService.HintSize="510,619" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[NoResultViewOpen]" DisplayName="If ResultViewOpen" sap:VirtualizedContainerService.HintSize="510,751" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -414,13 +408,13 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="300,140" sap2010:WorkflowViewState.IdRef="Sequence_16">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,272" sap2010:WorkflowViewState.IdRef="Sequence_16">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'list item'" sap:VirtualizedContainerService.HintSize="258,52" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'list item'" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
             <ui:WaitUiElementAppear.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1bf4ef15-cb6f-42ee-b7a2-fa66ae7ae3a4" Selector="&lt;wnd app='tcm.exe' cls='Afx:*' title='* - Sökverktyg' /&gt;&lt;wnd cls='SysListView32' /&gt;&lt;ctrl role='list item' idx='1' /&gt;" TimeoutMS="[in_TimeoutInSeconds]">
                 <ui:Target.WaitForReady>
@@ -435,9 +429,9 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:WaitUiElementAppear>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Result is opened. &quot;]" />
         </Sequence>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Result is opened. &quot;]" />
   </Sequence>
 </Activity>

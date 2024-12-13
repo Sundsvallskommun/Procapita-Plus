@@ -24,6 +24,7 @@
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -60,6 +61,11 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="LogIn_TestCase" sap:VirtualizedContainerService.HintSize="512,742" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -76,30 +82,38 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Genreal\Search Tool.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Genreal\Search Tool.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="In_SearchTool">Gem Bevakning</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_SearchTool">
+            <Literal x:TypeArguments="x:String">VoO Aktualisering</Literal>
+          </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
     <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="450,224" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Boolean" Name="resultfound" />
+      </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions In Search Tool\Search Bevakning.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Actions In Search Tool\Search Bevakning.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions In Search Tool\Search Aktualisering.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Actions In Search Tool\Search Aktualisering.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_Tom">
-            <Literal x:TypeArguments="x:String">241212</Literal>
+          <InArgument x:TypeArguments="x:String" x:Key="in_CitizensID2">
+            <Literal x:TypeArguments="x:String">*</Literal>
           </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_From">
-            <Literal x:TypeArguments="x:String">241212</Literal>
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_CitizensID2" />
           <InArgument x:TypeArguments="x:String" x:Key="in_CitizensID1" />
-          <InArgument x:TypeArguments="x:Int32" x:Key="in_TimeoutInSeconds">
-            <Literal x:TypeArguments="x:Int32" Value="50" />
+          <InArgument x:TypeArguments="x:String" x:Key="in_RadioButton">
+            <Literal x:TypeArguments="x:String">Ej Behandlade</Literal>
           </InArgument>
-          <OutArgument x:TypeArguments="x:Boolean" x:Key="out_ResultFound" />
+          <InArgument x:TypeArguments="x:String" x:Key="in_Tom" />
+          <InArgument x:TypeArguments="x:String" x:Key="in_From" />
+          <InArgument x:TypeArguments="x:Int32" x:Key="in_TimeoutInSeconds">
+            <Literal x:TypeArguments="x:Int32" Value="360" />
+          </InArgument>
+          <OutArgument x:TypeArguments="x:Boolean" x:Key="out_ResultFound">
+            <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="resultfound" />
+          </OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
