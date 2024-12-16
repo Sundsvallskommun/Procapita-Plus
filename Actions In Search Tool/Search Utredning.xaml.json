@@ -61,8 +61,8 @@
       "DataSourceItems": null
     },
     {
-      "Name": "in_TimeoutInSeconds",
-      "DisplayName": "in_TimeoutInSeconds",
+      "Name": "in_TimeoutMilliseconds",
+      "DisplayName": "in_TimeoutMilliseconds",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,
