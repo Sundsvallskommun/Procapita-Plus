@@ -82,9 +82,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Genreal\Search Tool.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Genreal\Search Tool.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="In_SearchTool">
-            <Literal x:TypeArguments="x:String">VoO Aktualisering</Literal>
-          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_SearchTool">VoO Aktualisering</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
@@ -108,12 +106,12 @@
           </InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="in_Tom" />
           <InArgument x:TypeArguments="x:String" x:Key="in_From" />
-          <InArgument x:TypeArguments="x:Int32" x:Key="in_TimeoutInSeconds">
-            <Literal x:TypeArguments="x:Int32" Value="360" />
-          </InArgument>
           <OutArgument x:TypeArguments="x:Boolean" x:Key="out_ResultFound">
             <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="resultfound" />
           </OutArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="in_TimeoutMilliseconds">
+            <Literal x:TypeArguments="x:Int32" Value="900000" />
+          </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
