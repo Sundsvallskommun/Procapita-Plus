@@ -89,17 +89,17 @@
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions In Search Tool\Search Bevakning.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Actions In Search Tool\Search Bevakning.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_Tom">
-            <Literal x:TypeArguments="x:String">241212</Literal>
+            <Literal x:TypeArguments="x:String">250113</Literal>
           </InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="in_From">
-            <Literal x:TypeArguments="x:String">241212</Literal>
+            <Literal x:TypeArguments="x:String">240907</Literal>
           </InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="in_CitizensID2" />
           <InArgument x:TypeArguments="x:String" x:Key="in_CitizensID1" />
-          <InArgument x:TypeArguments="x:Int32" x:Key="in_TimeoutInSeconds">
-            <Literal x:TypeArguments="x:Int32" Value="50" />
-          </InArgument>
           <OutArgument x:TypeArguments="x:Boolean" x:Key="out_ResultFound" />
+          <InArgument x:TypeArguments="x:Int32" x:Key="in_TimeoutMilliseconds">
+            <Literal x:TypeArguments="x:Int32" Value="900000" />
+          </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
